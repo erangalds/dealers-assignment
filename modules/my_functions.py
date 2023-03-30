@@ -79,6 +79,18 @@ def display_products_of_dealer(selected_dealers, dealer_products_list):
 
     print(selected_dealer_products)
 
+def display_products_of_dealer_using_dealer_class(selected_dealer, dealer_products_list):
+
+    selected_dealer_products = list()
+
+    dealer_name = selected_dealer.name
+
+    for dealer_products in dealer_products_list:
+        if dealer_name == dealer_products[0]:
+            selected_dealer_products.append(dealer_products)
+            print('Dealer Name: ', dealer_name, ' Brand:', dealer_products[1], ' Price: ', dealer_products[2], ' Quantity: ', dealer_products[3])
+
+    print(selected_dealer_products)
 
 def sorting_dealer_based_on_location(dealers):
 
@@ -100,3 +112,7 @@ def sorting_dealer_based_on_location(dealers):
                 if max_location <= dealer[2]:
                     max_location = dealer[2]
                     continue
+
+
+def calling_inside_class():
+    print('Hey this is calling a function in the module from the class')
